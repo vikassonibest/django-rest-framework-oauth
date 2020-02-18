@@ -158,9 +158,9 @@ class OAuth2Authentication(BaseAuthentication):
         else:
             return None
 
-        return self.authenticate_credentials(request, access_token)
+        return self.authenticate_credentials(access_token)
 
-    def authenticate_credentials(self, request, access_token):
+    def authenticate_credentials(self, access_token):
         """
         Authenticate the request, given the access token.
         """
